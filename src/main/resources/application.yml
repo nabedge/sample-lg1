@@ -1,0 +1,12 @@
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    username: sampleuser
+    password: samplepass
+    url: "jdbc:postgresql://127.0.0.1:9832/sampledb"
+#    url: "jdbc:postgresql://127.0.0.1:9832/sampledb?readOnly=true&readOnlyMode=always"
+    hikari:
+      auto-commit: false # デフォルトならtrueのはず
+      read-only: true
