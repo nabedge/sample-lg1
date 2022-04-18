@@ -6,7 +6,7 @@ spring:
     username: sampleuser
     password: samplepass
     url: "jdbc:postgresql://127.0.0.1:9832/sampledb"
-#    url: "jdbc:postgresql://127.0.0.1:9832/sampledb?readOnly=true&readOnlyMode=always"
+#    url: "jdbc:postgresql://127.0.0.1:9832/sampledb?readOnly=true"
     hikari:
       auto-commit: false # デフォルトならtrueのはず
       read-only: true

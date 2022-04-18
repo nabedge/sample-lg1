@@ -10,15 +10,15 @@ open class Sample1(
     private val jdbcTemplate: JdbcTemplate
 ) {
 
-//    @Transactional
+    @Transactional
     fun exec() {
         val before = jdbcTemplate.queryForList("select * from sample_tbl order by id desc limit 3")
         println(before)
 
         jdbcTemplate.execute("insert into sample_tbl (txt) values ('${OffsetDateTime.now()}')")
 
-        val list = jdbcTemplate.queryForList("select * from sample_tbl order by id desc limit 3")
+        val after = jdbcTemplate.queryForList("select * from sample_tbl order by id desc limit 3")
 
-        println(list)
+        println(after)
     }
 }
